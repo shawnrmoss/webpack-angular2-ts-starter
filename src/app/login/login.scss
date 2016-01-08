@@ -1,0 +1,37 @@
+.loginBox {
+    border: 1px solid #B6B6B6;
+    background-color: #FFFFFF;
+    padding:25px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;   
+}
+
+.login {
+  width: 40%;
+}
+
+.sign-in-btn{
+    width: 100%;
+}
+
+@media(max-width:767px){
+    .loginBox {
+        width: 250px;
+    }    
+}
+@media(min-width:768px){
+    .loginBox {
+        width: 400px;
+    }      
+}
+@media(min-width:992px){
+    .loginBox {
+        width: 600px;
+    }      
+}
+@media(min-width:1200px){
+    .loginBox {
+        width: 600px;
+    }       
+}

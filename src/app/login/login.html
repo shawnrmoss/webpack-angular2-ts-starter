@@ -1,0 +1,17 @@
+<div class="form-group loginBox md-shadow-bottom-z-2 center-block">    
+    <form>
+        <div class="form-group">
+            <label for="customerName">Customer</label>
+            <input id="inputCustomerName" class="form-control" [(ngModel)]="loginBindingModel.customerName" placeholder="Customer Name" required >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input id="inputEmail" type="email" class="form-control" [(ngModel)]="loginBindingModel.emailAddress" placeholder="Email" required >
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input id="inputPassword" type="password" class="form-control" [(ngModel)]="loginBindingModel.password" placeholder="Password" required >
+        </div>  
+        <button type="submit" class="btn btn-success sign-in-btn" >Sign In</button>
+    </form>
+<div>
