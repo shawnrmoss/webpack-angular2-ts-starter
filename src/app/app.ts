@@ -5,11 +5,13 @@ import {Component} from 'angular2/core';
 import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {FORM_PROVIDERS} from 'angular2/common';
 
+import {Header} from './layout/header/header.component';
+import {Actionbar} from './layout/actionbar/actionbar.component';
+
+//For Routing
 import {Home} from './home/home';
 import {Login} from './login/login';
 import {Units} from './units/units.component';
-
-import '../assets/styles/main';
 
 /*
  * App Component
@@ -18,7 +20,7 @@ import '../assets/styles/main';
 @Component({
   selector: 'app',
   providers: [ ...FORM_PROVIDERS ],
-  directives: [ ...ROUTER_DIRECTIVES ],
+  directives: [ ...ROUTER_DIRECTIVES, Header ],
   pipes: [],
   styles: [],
   template: require('./app.html')

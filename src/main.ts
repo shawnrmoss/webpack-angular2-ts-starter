@@ -10,6 +10,7 @@ import {HTTP_PROVIDERS} from 'angular2/http';
  * App Component
  * our top level component that holds all of our components
  */
+import '../src/assets/styles/main';
 import {App} from './app/app';
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
