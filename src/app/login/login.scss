@@ -1,4 +1,14 @@
+
+
+@import './src/assets/styles/main';
+
+body {
+    background-color: $palette-bg-dark !important;
+    padding-top:100px;
+}
+
 .loginBox {
+    
     border: 1px solid #B6B6B6;
     background-color: #FFFFFF;
     padding:25px;

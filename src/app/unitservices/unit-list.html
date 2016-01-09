@@ -1,5 +1,5 @@
 
-<div id="unitBox">
+<div id="unitBox md-shadow-bottom-z-2" >
     
     <h1>{{title}}</h1>
     
@@ -31,17 +31,7 @@
             </table>
         </div>
     </div>
-    
-    <div *ngIf="selectedUnit" class="col-md-4" >
-        <h2>{{selectedUnit.name}} details!</h2>
-        <div><label>id: </label>{{selectedUnit.id}}</div>
-        <div>
-            <label>Year: </label>
-            <input [(ngModel)]="selectedUnit.year" placeholder="year"/>
-            <label>name: </label>
-            <input [(ngModel)]="selectedUnit.name" placeholder="name"/>
-        </div>
-    </div>    
+         
 </div>
             
 

@@ -5,36 +5,35 @@ import {Component} from 'angular2/core';
 import {RouteConfig, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {FORM_PROVIDERS} from 'angular2/common';
 
-import {Header} from './layout/header/header.component';
-import {Actionbar} from './layout/actionbar/actionbar.component';
-
 //For Routing
-import {Home} from './home/home';
 import {Login} from './login/login';
-import {Units} from './units/units.component';
+import {Header} from './layout/header/header.component';
+import {UnitServices} from './unitservices/unit-services.component';
+
+//Providers
+import {DialogService} from './services/dialog.service';
 
 /*
  * App Component
  * Top Level Component
  */
 @Component({
-  selector: 'app',
-  providers: [ ...FORM_PROVIDERS ],
-  directives: [ ...ROUTER_DIRECTIVES, Header ],
-  pipes: [],
+  selector: 'app',    
   styles: [],
-  template: require('./app.html')
+  template: require('./app.html'),
+  pipes: [],
+  providers: [ ...FORM_PROVIDERS , DialogService],
+  directives: [ ...ROUTER_DIRECTIVES, Header],
 })
 @RouteConfig([    
-  { path: '/', name: 'Index', component: Home },
-  { path: '/login',   name: 'Login',   component: Login },
-  { path: '/units',   name: 'Units',   component: Units }  
+  { path: '/login',   name: 'Login',   component: Login, useAsDefault: true },  
+  { // Unit Services child route
+    path: '/unitservices/...',
+    name: 'UnitServices',
+    component: UnitServices
+  },
 ])
-export class App {
-  name = 'Shawns mother fucking header';  
-  constructor() {
-  }
-}
+export class App {}
 
 /*
  * Please review the https://github.com/AngularClass/angular2-examples/ repo for

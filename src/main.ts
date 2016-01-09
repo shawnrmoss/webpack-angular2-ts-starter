@@ -11,7 +11,7 @@ import {HTTP_PROVIDERS} from 'angular2/http';
  * our top level component that holds all of our components
  */
 import '../src/assets/styles/main';
-import {App} from './app/app';
+import {App} from './app/app.component';
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our Services and Providers into Angular's dependency injection
